@@ -7,7 +7,7 @@ sleep 2
 cd debian12-slim_64
 cp setup_s5.sh /root/project/s5
 cd ..
-docker run --name s5-node -d -v /root/project/s5:/app -it debian:bookworm-slim
+docker run --name s5-node -p 4444:4444 -p 5522:5522 -p 8989:8989 -d -v /root/project/s5:/app -v /root/project/devs/S5:/root/devs/S5 -it debian:bookworm-slim
 
 sleep 8
 
