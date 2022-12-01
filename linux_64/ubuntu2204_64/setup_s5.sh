@@ -25,14 +25,3 @@ cp default_config.toml config.toml
 echo dart bin/s5_server.dart config.toml > s5-node_start.sh
 chmod 0777 s5-node_start.sh
 
-
-
-
-
-
-
-
-
-
-
-
