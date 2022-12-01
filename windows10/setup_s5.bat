@@ -23,7 +23,6 @@ call rustup-init.exe --default-toolchain stable-x86_64-pc-windows-gnu -y
 wget https://aka.ms/vs/17/release/vc_redist.x64.exe
 call vc_redist.x64.exe /q /norestart
 
-
 call refreshenv
 
 echo "You must restart windows10, before you can build s5-node!!!"
