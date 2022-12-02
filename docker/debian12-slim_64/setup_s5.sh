@@ -21,7 +21,8 @@ dart pub get
 cd rust
 cargo build --release
 cd ..
-cp default_config.toml config.toml
+cp /app/default_config_extra.toml config.toml
+
 echo dart bin/s5_server.dart config.toml > s5-node_start.sh
 chmod 0777 s5-node_start.sh
 

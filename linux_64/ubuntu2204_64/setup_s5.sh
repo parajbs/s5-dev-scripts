@@ -11,17 +11,18 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 source ~/.profile
 source ~/.cargo/env
-
+cp default_config.toml ~/devs/config.toml
 cd ~
 mkdir devs
 cd devs
 git clone https://github.com/s5-dev/S5.git
+mc config.toml ~/devs/S5/config.toml
+
 cd S5
 dart pub get
 cd rust
 cargo build --release
 cd ..
-cp default_config.toml config.toml
 echo dart bin/s5_server.dart config.toml > s5-node_start.sh
 chmod 0777 s5-node_start.sh
 
