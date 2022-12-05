@@ -1,8 +1,19 @@
 # s5-dev-scripts
 A collection for s5-node install and build scripts for windows10 / ubuntu22.04 / Debian9.2 and docker-start-script for debian12 / ubuntu2204.
 
-## version
+## Version
 0.2.0
+
+## About S5 network
+
+S5 is a decentralized network that puts you in control of your data and identity.
+
+At its core, it is a content-addressed storage network like IPFS and also uses many of the formats and standards created in the IPFS project.
+
+This repository contains a proof of concept implementation of a S5 node written in the Dart programming language. It is licensed under the MIT license.
+
+project: https://github.com/s5-dev/S5
+skd-doc: https://docs.s5.ninja/
 
 ## Prerequisites
 
