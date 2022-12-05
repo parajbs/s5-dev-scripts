@@ -1,5 +1,5 @@
 # s5-dev-scripts
-A collection for s5-node install and build scripts for windows10 / ubuntu 22.04 and docker start script with debian12-slim.
+A collection for s5-node install and build scripts for windows10 / ubuntu22.04 / Debian9.2 and docker-start-script for debian12 / ubuntu2204.
 
 ## Prerequisites
 

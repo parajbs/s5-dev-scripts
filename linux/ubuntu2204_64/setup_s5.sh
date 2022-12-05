@@ -7,22 +7,32 @@ apt-get update
 apt install dart -y
 echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup-init.sh
+chmod 0777 rustup-init.sh
+./rustup-init.sh --default-toolchain stable-x86_64-unknown-linux-gnu -y
+rm rustup-init.sh
 
-source ~/.profile
-source ~/.cargo/env
-cp default_config.toml ~/devs/config.toml
-cd ~
-mkdir devs
+source /root/.profile
+source /root/.cargo/env
+
+mkdir /opt/devs
+
+cp default_config_extra.toml /opt/devs/config.toml
+cp s5node.service /etc/systemd/system/s5node.service
+cd /opt
 cd devs
 git clone https://github.com/s5-dev/S5.git
-mc config.toml ~/devs/S5/config.toml
+mv config.toml ~/devs/S5/config.toml
 
 cd S5
 dart pub get
 cd rust
 cargo build --release
 cd ..
-echo dart bin/s5_server.dart config.toml > s5-node_start.sh
+
+echo cd /opt/devs/S5/ > s5-node_start.sh
+echo /usr/bin/dart /opt/devs/S5/bin/s5_server.dart /opt/devs/S5/config.toml >> s5-node_start.sh
 chmod 0777 s5-node_start.sh
+
+
 

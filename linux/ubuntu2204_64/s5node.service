@@ -1,0 +1,12 @@
+[Unit]
+Description=S5-node daemon
+After=remote-fs.target nss-user-lookup.target
+
+[Service]
+ExecStart=/bin/bash -c "/opt/devs/S5/s5-node_start.sh"
+IgnoreSIGPIPE=false
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
