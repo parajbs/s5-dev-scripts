@@ -1,3 +1,12 @@
+# attention information!!!
+this repo was transferred to a new account "parajbs-dev" and further developed there.
+
+link: https://github.com/parajbs-dev/s5-setup-scripts
+
+this old repo will be deleted from this account "parajbs" in early 2023.
+
+---
+
 # s5-dev-scripts
 A collection for s5-node install and build scripts for windows10 / ubuntu22.04 / Debian9.2 and docker-start-script for debian12 / ubuntu2204.
 
